@@ -1,5 +1,6 @@
 package application;
 
+import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -19,7 +20,7 @@ public class Program {
 			int number = sc.nextInt();
 			System.out.print("Holder: ");
 			sc.nextLine();
-			String holder = sc.nextLine();
+			String holder = sc.nextLine().;
 			System.out.print("Initial balance: ");
 			Double balance = sc.nextDouble();
 			System.out.print("Withdraw limit: ");
@@ -38,6 +39,9 @@ public class Program {
 		}
 		catch(DomainException e){
 			System.out.println("Withdraw error: " + e.getMessage());
+		}
+		catch(InputMismatchException e){
+			System.out.println("Only numbers : "+e.getMessage());
 		}
 		catch (RuntimeException e) {
 			System.out.println("Unexpected error");

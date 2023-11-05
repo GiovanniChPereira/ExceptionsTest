@@ -53,22 +53,14 @@ public class Account {
 	}
 
 	public void withdraw(Double amount) {
-		
-		if(amount>withdrawLimit) {
+
+		if (amount > withdrawLimit) {
 			throw new DomainException("The amount exceeds withdraw limit");
 		}
-		if(amount>balance) {
+		if (amount > balance) {
 			throw new DomainException("Not enough balance");
 		}
-		
+
 		this.balance -= amount;
 	}
-
-	@Override
-	public String toString() {
-		return String.valueOf(balance);
-	}
-	
-	
-
 }
