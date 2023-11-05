@@ -20,7 +20,7 @@ public class Program {
 			int number = sc.nextInt();
 			System.out.print("Holder: ");
 			sc.nextLine();
-			String holder = sc.nextLine().;
+			String holder = sc.nextLine();
 			System.out.print("Initial balance: ");
 			Double balance = sc.nextDouble();
 			System.out.print("Withdraw limit: ");
